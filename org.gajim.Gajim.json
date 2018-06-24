@@ -350,8 +350,8 @@
                 {
                     "type": "git",
                     "url": "https://dev.gajim.org/gajim/python-nbxmpp.git",
-                    "tag": "nbxmpp-0.6.5",
-                    "commit": "541d0da11e3c81c20dd797687d0da2d367b45244"
+                    "tag": "nbxmpp-0.6.6",
+                    "commit": "7256d13ebcde065824da4715df0db399fe9aaf57"
                 }
             ]
         },
@@ -365,8 +365,8 @@
                 {
                     "type": "git",
                     "url": "https://dev.gajim.org/gajim/gajim.git",
-                    "tag": "gajim-1.0.2",
-                    "commit": "6cdcbf1154c61b9576924f82d4c20fd87d1b7a87"
+                    "tag": "gajim-1.0.3",
+                    "commit": "0ab9d1210615090292688f442e387e4fb35ea165"
                 },
                 {
                     "type": "archive",
