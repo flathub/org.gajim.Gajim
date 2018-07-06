@@ -260,13 +260,13 @@
             "name": "python3-python-gnupg",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --prefix=/app python_gnupg-0.4.1-py2.py3-none-any.whl"
+                "pip3 install --prefix=/app python_gnupg-0.4.3-py2.py3-none-any.whl"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://pypi.python.org/packages/7a/f2/f655f52ff21457138d4a002aa0f67f1923cf682560b354cacecde1b2c767/python_gnupg-0.4.1-py2.py3-none-any.whl",
-                    "sha256": "1e4aa381bad3edbbdfcfb0ed0de73b26d6115f5090cdae9b5b6f6ff177a66aa7"
+                    "url": "https://files.pythonhosted.org/packages/ba/27/b87814299af38edc6905042c07a7f889d15914b0589b9cd197b9efb09cea/python_gnupg-0.4.3-py2.py3-none-any.whl",
+                    "sha256": "faa69bab58ed0936f0ccf96c99b92369b7a1819305d37dfe5c927d21a437a09d"
                 }
             ]
         },
