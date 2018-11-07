@@ -31,10 +31,6 @@ add-extensions:
     no-autodownload: true
     autodelete: true
 
-build-options:
-  cflags: -O2 -g
-  cxxflags: -O2 -g
-
 cleanup:
   - '/bin/easy*'
   - /include
