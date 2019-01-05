@@ -140,13 +140,13 @@ modules:
   - name: python3-keyring
     buildsystem: simple
     build-commands:
-      - pip3 install --prefix=/app keyring-17.0.0-py2.py3-none-any.whl
+      - pip3 install --prefix=/app keyring-17.1.1-py2.py3-none-any.whl
     cleanup:
       - /bin
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/c8/4d/e1f19eebda5cd58030ecc1f61321f71661cfdb9d911d0b1053ab0ca7351c/keyring-17.0.0-py2.py3-none-any.whl
-        sha256: f3d6a02f513546ca13b6cd3418d769e8fe1932dc7c00bd0c2a342b5eee370f15
+        url: https://files.pythonhosted.org/packages/28/01/06f2e55264994a89d543ee37f2cfc4af85800824a8ca5c6532f715ff41a9/keyring-17.1.1-py2.py3-none-any.whl
+        sha256: d71368b9a10dc096c8a1b69a46fc23f0a551f709b9a55b4d4deb7d2fbd809b68
 
   - name: python3-cssutils
     buildsystem: simple
@@ -194,6 +194,6 @@ modules:
       - type: git
         url: https://dev.gajim.org/gajim/gajim.git
         tag: gajim-1.1.1
-        commit: fd60c2fcf75885f2be40a33f9f5209c5b8755b77
+        commit: f5a08c8953b5b7abbc801875af67f0281d2b0975
     post-install:
       - install -d /app/plugins
