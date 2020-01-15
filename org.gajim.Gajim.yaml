@@ -1,6 +1,6 @@
 app-id: org.gajim.Gajim
 runtime: org.gnome.Platform
-runtime-version: 3.32
+runtime-version: "3.34"
 sdk: org.gnome.Sdk
 command: gajim
 finish-args:
@@ -16,11 +16,6 @@ finish-args:
   - --talk-name=org.mpris.MediaPlayer2.*
   # Keyring
   - --talk-name=org.freedesktop.secrets
-  # dconf
-  - --filesystem=xdg-run/dconf
-  - --filesystem=~/.config/dconf:ro
-  - --talk-name=ca.desrt.dconf
-  - --env=DCONF_USER_CONFIG_DIR=.config/dconf
   # GnuPG
   - --filesystem=~/.gnupg
   # extensions
