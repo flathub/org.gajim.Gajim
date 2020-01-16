@@ -189,7 +189,7 @@ modules:
     sources:
       - type: git
         url: https://dev.gajim.org/gajim/gajim.git
-        tag: gajim-1.1.3
-        commit: 257f784804d81afcafe996d4d96b0e93c17a11dc
+        tag: gajim-1.1.3-1
+        commit: a66b293d0a9965a3ea330f70a8c0e11b55832241
     post-install:
       - install -d /app/plugins
