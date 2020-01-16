@@ -1,6 +1,6 @@
 app-id: org.gajim.Gajim
 runtime: org.gnome.Platform
-runtime-version: 3.32
+runtime-version: "3.34"
 sdk: org.gnome.Sdk
 command: gajim
 finish-args:
@@ -16,11 +16,6 @@ finish-args:
   - --talk-name=org.mpris.MediaPlayer2.*
   # Keyring
   - --talk-name=org.freedesktop.secrets
-  # dconf
-  - --filesystem=xdg-run/dconf
-  - --filesystem=~/.config/dconf:ro
-  - --talk-name=ca.desrt.dconf
-  - --env=DCONF_USER_CONFIG_DIR=.config/dconf
   # GnuPG
   - --filesystem=~/.gnupg
   # extensions
@@ -194,7 +189,7 @@ modules:
     sources:
       - type: git
         url: https://dev.gajim.org/gajim/gajim.git
-        tag: gajim-1.1.3
-        commit: 257f784804d81afcafe996d4d96b0e93c17a11dc
+        tag: gajim-1.1.3-1
+        commit: a66b293d0a9965a3ea330f70a8c0e11b55832241
     post-install:
       - install -d /app/plugins
