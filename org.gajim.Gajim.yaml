@@ -212,11 +212,11 @@ modules:
   - name: python3-nbxmpp
     buildsystem: simple
     build-commands:
-      - pip3 install --prefix=/app nbxmpp-2.0.1-py3-none-any.whl
+      - pip3 install --prefix=/app nbxmpp-2.0.2-py3-none-any.whl
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/9c/4e/dcf37c33a67eb2df00a3676deedb707d381815ce94fbb0007f97a82d1664/nbxmpp-2.0.1-py3-none-any.whl
-        sha256: 84edf0e0fe9b751e8796af46b388881f243b80afbf0664f82464cccc0afc417c
+        url: https://files.pythonhosted.org/packages/7f/e4/d9c09af95418609c0c0cc4ca24ac531373839e1d06beeb53e825873e7854/nbxmpp-2.0.2-py3-none-any.whl
+        sha256: f5e7890525c4427276a0fe2127645af8539d1765d0053d11d2c217812675266e
 
   - name: gajim
     buildsystem: simple
@@ -226,7 +226,7 @@ modules:
     sources:
       - type: git
         url: https://dev.gajim.org/gajim/gajim.git
-        tag: gajim-1.3.0
-        commit: 6f0329870288135502b9329422ba27685a7b7faf
+        tag: gajim-1.3.1
+        commit: 8000e11adb50a8596d9360e2cbd34d699e0b398e
     post-install:
       - install -d /app/plugins
