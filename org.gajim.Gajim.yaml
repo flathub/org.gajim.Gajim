@@ -201,11 +201,11 @@ modules:
         sha256: cf4d16a716e813449bd631405dc1001ea89537b8cdae2b8abfb3999212bd43b4
 
   - name: farstream
+    rm-configure: true
     sources:
-      - type: git
-        url: https://gitlab.freedesktop.org/farstream/farstream.git
-        tag: 0.2.9
-        commit: 1e42278d11730f8409878e3b4904fdd47e360e6f
+      - type: archive
+        url: https://freedesktop.org/software/farstream/releases/farstream/farstream-0.2.9.tar.gz
+        sha256: cb7d112433cf7c2e37a8ec918fb24f0ea5cb293cfa1002488e431de26482f47b
       - type: patch
         path: farstream-make-4.3.patch
 
