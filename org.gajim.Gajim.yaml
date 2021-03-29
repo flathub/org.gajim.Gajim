@@ -1,6 +1,6 @@
 app-id: org.gajim.Gajim
 runtime: org.gnome.Platform
-runtime-version: '3.38'
+runtime-version: '40'
 sdk: org.gnome.Sdk
 command: gajim
 finish-args:
@@ -94,11 +94,11 @@ modules:
   - name: python3-idna
     buildsystem: simple
     build-commands:
-      - pip3 install --prefix=/app idna-2.10-py2.py3-none-any.whl
+      - pip3 install --prefix=/app idna-3.1-py3-none-any.whl
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/a2/38/928ddce2273eaa564f6f50de919327bf3a00f091b5baba8dfa9460f3a8a8/idna-2.10-py2.py3-none-any.whl
-        sha256: b97d804b1e9b523befed77c48dacec60e6dcb0b5391d57af6a65a312a90648c0
+        url: https://files.pythonhosted.org/packages/29/88/c52aae187d3b128a0f13f36a6c987fc0d408d03a678ad9996516925d8495/idna-3.1-py3-none-any.whl
+        sha256: 5205d03e7bcbb919cc9c19885f9920d622ca52448306f2377daede5cf3faac16
 
   - name: python3-cryptography
     buildsystem: simple
@@ -148,22 +148,34 @@ modules:
   - name: python3-zipp
     buildsystem: simple
     build-commands:
-      - pip3 install --prefix=/app zipp-3.4.0-py3-none-any.whl
+      - pip3 install --prefix=/app zipp-3.4.1-py3-none-any.whl
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/41/ad/6a4f1a124b325618a7fb758b885b68ff7b058eec47d9220a12ab38d90b1f/zipp-3.4.0-py3-none-any.whl
-        sha256: 102c24ef8f171fd729d46599845e95c7ab894a4cf45f5de11a44cc7444fb1108
+        url: https://files.pythonhosted.org/packages/0f/8c/715c54e9e34c0c4820f616a913a7de3337d0cd79074dd1bed4dd840f16ae/zipp-3.4.1-py3-none-any.whl
+        sha256: 51cb66cc54621609dd593d1787f286ee42a5c0adbb4b29abea5a63edc3e03098
 
-  - name: python3-keyring
+  # keyring dependency
+  - name: python3-importlib-metadata
     buildsystem: simple
     build-commands:
-      - pip3 install --prefix=/app keyring-22.3.0-py3-none-any.whl
+      - pip3 install --prefix=/app importlib_metadata-3.9.0-py3-none-any.whl
     cleanup:
       - /bin
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/96/69/3ee574555067bb416b07b9816dc73dc2a0deb1799464f2f7fe4dee506453/keyring-22.3.0-py3-none-any.whl
-        sha256: 2bc8363ebdd63886126a012057a85c8cb6e143877afa02619ac7dbc9f38a207b
+        url: https://files.pythonhosted.org/packages/d9/10/191b97506cd4cceb4b860fb5c75b26feeefbca5a8f7f4687bca71e215cc6/importlib_metadata-3.9.0-py3-none-any.whl
+        sha256: 6fd684b4c6c7bb36d57e93d57fc244b5ffc08faa1c298bcda3dfbbbf19d7550a
+
+  - name: python3-keyring
+    buildsystem: simple
+    build-commands:
+      - pip3 install --prefix=/app keyring-23.0.1-py3-none-any.whl
+    cleanup:
+      - /bin
+    sources:
+      - type: file
+        url: https://files.pythonhosted.org/packages/26/f9/41230ac47f738f1ba66676dc8d3b30ca5b1f9eb0230fc204bcd9836c4ae9/keyring-23.0.1-py3-none-any.whl
+        sha256: 8f607d7d1cc502c43a932a275a56fe47db50271904513a379d39df1af277ac48
 
   - name: python3-css-parser
     buildsystem: simple
