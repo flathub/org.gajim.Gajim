@@ -158,13 +158,13 @@ modules:
   - name: python3-importlib-metadata
     buildsystem: simple
     build-commands:
-      - pip3 install --prefix=/app importlib_metadata-3.9.0-py3-none-any.whl
+      - pip3 install --prefix=/app importlib_metadata-4.0.1-py3-none-any.whl
     cleanup:
       - /bin
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/d9/10/191b97506cd4cceb4b860fb5c75b26feeefbca5a8f7f4687bca71e215cc6/importlib_metadata-3.9.0-py3-none-any.whl
-        sha256: 6fd684b4c6c7bb36d57e93d57fc244b5ffc08faa1c298bcda3dfbbbf19d7550a
+        url: https://files.pythonhosted.org/packages/8e/e2/49966924c93909d47612bb47d911448140a2f6c1390aec2f4c1afbe3748f/importlib_metadata-4.0.1-py3-none-any.whl
+        sha256: d7eb1dea6d6a6086f8be21784cc9e3bcfa55872b52309bc5fad53a8ea444465d
 
   - name: python3-keyring
     buildsystem: simple
@@ -238,7 +238,7 @@ modules:
     sources:
       - type: git
         url: https://dev.gajim.org/gajim/gajim.git
-        tag: gajim-1.3.1
-        commit: 8000e11adb50a8596d9360e2cbd34d699e0b398e
+        tag: gajim-1.3.2
+        commit: 19e371c835a1c8b976d0149f28f0d2063d455bc5
     post-install:
       - install -d /app/plugins
