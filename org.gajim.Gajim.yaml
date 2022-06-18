@@ -17,6 +17,8 @@ finish-args:
   # Keyring
   - --talk-name=org.freedesktop.secrets
   - --talk-name=org.kde.kwalletd5
+  # Notifications
+  - --talk-name=org.freedesktop.Notifications
   # GnuPG
   - --filesystem=~/.gnupg
   # camera access
@@ -312,6 +314,6 @@ modules:
     sources:
       - type: git
         url: https://dev.gajim.org/gajim/gajim.git
-        tag: 1.4.3
+        tag: 1.4.4
     post-install:
       - install -d /app/plugins
