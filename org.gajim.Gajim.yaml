@@ -19,6 +19,8 @@ finish-args:
   - --talk-name=org.kde.kwalletd5
   # Notifications
   - --talk-name=org.freedesktop.Notifications
+  # tray/status icon
+  - --talk-name=org.kde.StatusNotifierWatcher
   # GnuPG
   - --filesystem=~/.gnupg
   # camera access
@@ -315,7 +317,7 @@ modules:
     sources:
       - type: git
         url: https://dev.gajim.org/gajim/gajim.git
-        tag: 1.4.5
+        tag: 1.4.6
       - type: file
         path: app-overrides.json
     post-install:
