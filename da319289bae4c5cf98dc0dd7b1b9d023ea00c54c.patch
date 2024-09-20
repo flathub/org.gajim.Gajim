@@ -1,0 +1,24 @@
+From da319289bae4c5cf98dc0dd7b1b9d023ea00c54c Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Philipp=20H=C3=B6rist?= <philipp@hoerist.com>
+Date: Fri, 20 Sep 2024 19:00:03 +0200
+Subject: [PATCH] fix: Build: Build translations for all distributions again
+
+---
+ make.py | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/make.py b/make.py
+index a9e828b7c1..911ad5442d 100755
+--- a/make.py
++++ b/make.py
+@@ -185,6 +185,7 @@ def cmd_build(args: argparse.Namespace) -> None:
+ 
+     METADATA.mkdir(parents=True, exist_ok=True)
+ 
++    build_translations()
+     build_man()
+     build_meta()
+     build_app_icons()
+-- 
+GitLab
+

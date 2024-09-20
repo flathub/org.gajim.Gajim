@@ -377,6 +377,8 @@ modules:
       - type: git
         url: https://dev.gajim.org/gajim/gajim.git
         tag: 1.9.4
+      - type: patch
+        path: da319289bae4c5cf98dc0dd7b1b9d023ea00c54c.patch
       - type: file
         path: app-overrides.json
     post-install:
