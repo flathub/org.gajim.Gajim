@@ -218,14 +218,15 @@ modules:
       - type: patch
         path: farstream-make-4.3.patch
 
+  # Pillow dependencies
   - name: python3-pypind11
     buildsystem: simple
     build-commands:
-      - pip3 install --no-build-isolation .
+      - pip3 install pybind11-3.0.1-py3-none-any.whl
     sources:
-      - type: archive
-        url: https://files.pythonhosted.org/packages/2f/7b/a6d8dcb83c457e24a9df1e4d8fd5fb8034d4bbc62f3c324681e8a9ba57c2/pybind11-3.0.1.tar.gz
-        sha256: 9c0f40056a016da59bab516efb523089139fcc6f2ba7e4930854c61efb932051
+      - type: file
+        url: https://files.pythonhosted.org/packages/cd/8a/37362fc2b949d5f733a8b0f2ff51ba423914cabefe69f1d1b6aab710f5fe/pybind11-3.0.1-py3-none-any.whl
+        sha256: aa8f0aa6e0a94d3b64adfc38f560f33f15e589be2175e103c0a33c6bce55ee89
 
   - name: python3-pillow
     buildsystem: simple
