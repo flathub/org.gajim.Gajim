@@ -245,7 +245,7 @@ modules:
     sources:
       - type: file
         url: https://files.pythonhosted.org/packages/07/c6/80c95b1b2b94682a72cbdbfb85b81ae2daffa4291fbfa1b1464502ede10d/hpack-4.1.0-py3-none-any.whl
-        sha256: b03380493a519fce58ea5af42e4a42317bf9bd425596f7a0835ffce80f1a42e5
+        sha256: 157ac792668d995c657d93111f46b4535ed114f0c9c8d672271bbec7eae1b496
 
   - name: python3-hyperframe
     buildsystem: simple
