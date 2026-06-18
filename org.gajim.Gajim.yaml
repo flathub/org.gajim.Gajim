@@ -1,8 +1,12 @@
-app-id: org.gajim.Gajim
+app-id: org.gajim.Gajim.Devel
 runtime: org.gnome.Platform
 runtime-version: '50'
 sdk: org.gnome.Sdk
 command: gajim
+tags:
+  - devel
+  - development
+  - nightly
 finish-args:
   - --share=ipc
   - --share=network
@@ -31,7 +35,7 @@ finish-args:
   - --env=GI_TYPELIB_PATH=/app/lib/girepository-1.0:/app/plugins/lib/girepository-1.0
 
 add-extensions:
-  org.gajim.Gajim.Plugin:
+  org.gajim.Gajim.Devel.Plugin:
     directory: plugins
     merge-dirs: lib;site-packages
     add-ld-path: lib
@@ -438,9 +442,8 @@ modules:
     build-commands:
       - pip3 install --no-build-isolation .
     sources:
-      - type: archive
-        url: https://files.pythonhosted.org/packages/4f/6c/2e024e615cca6f5e03261cf8fa9f584a5ecd59d3fb7ac7e7bf52f2d9cee1/omemo_dr-1.2.0.tar.gz
-        sha256: 18b6542b3bb7ed6dce34dd02f32b16401982ba24f0146ddae091dcb92c79a484
+      - type: git
+        url: https://dev.gajim.org/gajim/omemo-dr.git
 
   # pysequoia dependencies
   - name: python3-pysequoia
@@ -448,9 +451,9 @@ modules:
     only-arches:
       - aarch64
     build-commands:
-      - pip3 install --no-build-isolation .
+      - pip3 install pysequoia-0.1.34-cp313-cp313-manylinux_2_17_aarch64.manylinux2014_aarch64.whl
     sources:
-      - type: archive
+      - type: file
         url: 
           https://files.pythonhosted.org/packages/bc/e7/23ab8e9b473a51b2d1b71b918e6947dcdecd3824bdc06526ebe4f8f41aea/pysequoia-0.1.34-cp313-cp313-manylinux_2_17_aarch64.manylinux2014_aarch64.whl
         sha256: bf28e95b7f2003b6958d498ea493da6bb43919e0d7c8f1dcb8094e479a88f8fa
@@ -460,9 +463,9 @@ modules:
     only-arches:
       - x86_64
     build-commands:
-      - pip3 install --no-build-isolation .
+      - pip3 install pysequoia-0.1.34-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
     sources:
-      - type: archive
+      - type: file
         url: 
           https://files.pythonhosted.org/packages/b8/7f/21fa4cd706b77928f95afab85da773905ffa0813926b67b6ab1a1a2a4726/pysequoia-0.1.34-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
         sha256: 9b9929d7e9219ffeaa9e97c6e2bc52d965e1897f3248b8ff00175776c008598e
@@ -480,24 +483,25 @@ modules:
   - name: python3-nbxmpp
     buildsystem: simple
     build-commands:
-      - pip3 install nbxmpp-7.2.0-py3-none-any.whl
+      - pip3 install --no-build-isolation .
     sources:
-      - type: file
-        url: https://files.pythonhosted.org/packages/df/ef/2bfe8af417ab7cdb5e0ee619817725fb8cabaf050a03c244df1c3e5875eb/nbxmpp-7.2.0-py3-none-any.whl
-        sha256: 151f98c78708e2d5c1754217faea718daab2ef4f0e53338eaf6eef9cd62b9fe7
+      - type: git
+        url: https://dev.gajim.org/gajim/python-nbxmpp.git
 
   - name: gajim
     buildsystem: simple
     build-commands:
-      - ./make.py build --dist=flatpak
-      - ./make.py install --dist=flatpak --prefix=/app
+      - ./make.py build --dist=flatpak-nightly
+      - ./make.py install --dist=flatpak-nightly --prefix=/app
       - pip3 install --no-build-isolation .
       - cp -t ${FLATPAK_DEST} app-overrides.json
     sources:
       - type: git
         url: https://dev.gajim.org/gajim/gajim.git
-        tag: 2.4.6
       - type: file
         path: app-overrides.json
+      - type: shell
+        commands:
+          - mv gajim/data/icons/hicolor/scalable/apps/gajim{-devel,}.svg
     post-install:
       - install -d /app/plugins
